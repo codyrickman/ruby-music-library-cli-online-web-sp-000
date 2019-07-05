@@ -20,7 +20,7 @@ class MusicLibraryController
         return
         break
       when "list songs"
-
+        list_songs
       end
     end
   end
