@@ -20,16 +20,19 @@ class MusicLibraryController
         return
         break
       when "list songs"
-        count = 1
-        songs = []
-        raw_songs = @importer.files
-        raw_songs.sort! { |a, b|  a<=>b}
-        raw_songs.each { |song|  song.gsub!(".mp3", "")}
-        raw_songs.each_with_index do |song, key|
-          num = key.to_i + 1
-          puts "#{num}. #{song}"
-        end
+
       end
+    end
+  end
+  def list_songs
+    count = 1
+    songs = []
+    raw_songs = @importer.files
+    raw_songs.sort! { |a, b|  a<=>b}
+    raw_songs.each { |song|  song.gsub!(".mp3", "")}
+    raw_songs.each_with_index do |song, key|
+      num = key.to_i + 1
+      puts "#{num}. #{song}"
     end
   end
 end
