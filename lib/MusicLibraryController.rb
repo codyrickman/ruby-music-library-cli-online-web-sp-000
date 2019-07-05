@@ -29,7 +29,7 @@ class MusicLibraryController
     raw_songs.sort! { |a, b|  a.name<=>b.name}
     raw_songs.each_with_index do |song, key|
       num = key.to_i + 1
-      puts "#{num}. #{song.name}"
+      puts "#{num}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
 end
