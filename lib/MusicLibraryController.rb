@@ -14,9 +14,9 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
-    gets
-    while gets != "exit" do
-      gets
+    command = gets
+    while command != "exit" do
+      command = gets
     end
   end
   def worker(command)
