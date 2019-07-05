@@ -17,7 +17,7 @@ class MusicLibraryController
       puts "What would you like to do?"
       command = gets
       if (command === "exit")
-        break
+        return
       end
     end
   end
