@@ -22,6 +22,7 @@ class MusicLibraryController
       when "list songs"
         raw_songs = @importer.files
         raw_songs.sort! { |a, b|  a<=>b}
+        raw_songs.each { |song|  song.gsub!(".mp3", "")}
         puts raw_songs
 
       end
