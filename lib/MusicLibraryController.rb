@@ -21,7 +21,4 @@ class MusicLibraryController
       end
     end
   end
-  def worker(command)
-    puts command
-  end
 end
