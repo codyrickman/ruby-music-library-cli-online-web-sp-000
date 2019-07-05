@@ -16,7 +16,7 @@ class MusicLibraryController
     while true do
       puts "What would you like to do?"
       command = gets
-      if (command === "exit")
+      if (command == "exit")
         return
       end
     end
