@@ -15,7 +15,7 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     while true do
       puts "What would you like to do?"
-      case gets
+      case gets.gsub(/\n/,"")
       when "exit"
         return
         break
