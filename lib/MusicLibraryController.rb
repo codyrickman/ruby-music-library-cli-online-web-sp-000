@@ -27,6 +27,7 @@ class MusicLibraryController
         raw_songs.each { |song|  song.gsub!(".mp3", "")}
         raw_songs.each do |key, song|
           puts "#{key}. #{song}"
+        end
       end
     end
   end
