@@ -27,7 +27,6 @@ class MusicLibraryController
         raw_songs.each do |song|
           songs << "#{count}. #{song}"
           count++
-        end
         puts songs
       end
     end
