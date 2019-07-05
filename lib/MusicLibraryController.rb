@@ -24,7 +24,7 @@ class MusicLibraryController
         raw_songs = @importer.files
         raw_songs.sort! { |a, b|  a<=>b}
         raw_songs.each { |song|  song.gsub!(".mp3", "")}
-        raw_songs.each do |song|
+        raw_songs.each |song| do
           songs << "#{count}. #{song}"
           count++
         end
