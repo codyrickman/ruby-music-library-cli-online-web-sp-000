@@ -17,6 +17,9 @@ class MusicLibraryController
     command = gets
     while command != "exit" do
       command = gets
+      if (command === "exit")
+        break
+      end
     end
   end
   def worker(command)
