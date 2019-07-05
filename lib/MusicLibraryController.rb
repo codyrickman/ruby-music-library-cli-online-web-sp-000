@@ -25,11 +25,14 @@ class MusicLibraryController
     end
   end
   def list_songs
+    output = []
     raw_songs = Song.all
     raw_songs.sort_by! { |song|  song.name}
     raw_songs.each_with_index do |song, key|
       num = key.to_i + 1
-      puts "#{num}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+      output << "#{num}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
+    output.uiq!
+    puts output
   end
 end
