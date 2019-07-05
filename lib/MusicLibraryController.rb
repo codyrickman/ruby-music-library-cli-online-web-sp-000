@@ -32,7 +32,7 @@ class MusicLibraryController
       num = key.to_i + 1
       output << "#{num}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
-    output.uiq!
+    output.uniq!
     puts output
   end
 end
