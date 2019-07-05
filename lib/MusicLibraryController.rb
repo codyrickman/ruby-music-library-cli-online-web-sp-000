@@ -5,6 +5,6 @@ class MusicLibraryController
   end
   def call
     path = gets
-    @controller = MusicLibraryController.new()
+    @controller = MusicLibraryController.new(path)
   end
 end
