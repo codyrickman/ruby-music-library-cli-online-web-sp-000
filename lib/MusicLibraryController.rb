@@ -4,6 +4,7 @@ class MusicLibraryController
     @importer.import
   end
   def call
-    @controller = MusicLibraryController.new(gets)
+    path = gets
+    @controller = MusicLibraryController.new()
   end
 end
