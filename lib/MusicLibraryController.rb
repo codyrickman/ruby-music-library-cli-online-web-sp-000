@@ -16,7 +16,7 @@ class MusicLibraryController
     while true do
       puts "What would you like to do?"
       case gets
-      when "exit\n"
+      when "exit"
         return
         break
       when "play"
