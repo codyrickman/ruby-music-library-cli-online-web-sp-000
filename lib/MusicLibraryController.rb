@@ -20,7 +20,7 @@ class MusicLibraryController
         return
         break
       when "list songs"
-        puts Songs.all
+        puts Song.all
       end
     end
   end
