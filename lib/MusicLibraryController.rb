@@ -21,12 +21,14 @@ class MusicLibraryController
         break
       when "list songs"
         count = 1
+        songs = []
         raw_songs = @importer.files
         raw_songs.sort! { |a, b|  a<=>b}
         raw_songs.each { |song|  song.gsub!(".mp3", "")}
         raw_songs.each do |song|
           songs << "#{count}. #{song}"
           count++
+        end
         puts songs
       end
     end
