@@ -19,8 +19,8 @@ class MusicLibraryController
       when "exit"
         return
         break
-      when "play"
-        puts "P"
+      when "list songs"
+        puts Songs.all
       end
     end
   end
