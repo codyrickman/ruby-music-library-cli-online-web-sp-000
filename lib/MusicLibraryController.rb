@@ -15,8 +15,13 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     while true do
       puts "What would you like to do?"
-      command = gets
-      puts command
+      case gets
+      when "exit"
+        return
+        break
+      when "play"
+        puts "P"
+      end
     end
   end
 end
