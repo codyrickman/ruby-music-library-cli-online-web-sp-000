@@ -54,5 +54,10 @@ class Song
     song.genre = Genre.find_or_create_by_name(tmp[0].strip)
     return song
   end
+  def self.create_from_filename(file_name)
+    song = Song.new_from_filename(file_name)
+    song.save
+    return song
+  end
 end
 Song.new_from_filename("Artist - Song - Genre.mp3")
