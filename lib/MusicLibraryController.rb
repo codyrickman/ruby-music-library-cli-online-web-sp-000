@@ -20,7 +20,10 @@ class MusicLibraryController
         return
         break
       when "list songs"
-        puts Song.all
+        raw_songs = @importer.files
+        raw_songs.sort! { |a, b|  a<=>b}
+        puts raw_songs
+
       end
     end
   end
