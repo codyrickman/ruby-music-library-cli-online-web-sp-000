@@ -26,7 +26,7 @@ class MusicLibraryController
         raw_songs.sort! { |a, b|  a<=>b}
         raw_songs.each { |song|  song.gsub!(".mp3", "")}
         raw_songs.each_with_index do |key, song|
-          num = key + 1
+          num = key.to_i + 1
           puts "#{num}. #{song}"
         end
       end
